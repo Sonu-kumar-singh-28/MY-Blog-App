@@ -7,12 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.ssu.xyvento.myblogapp.databinding.ActivityLoginScreenBinding
+import com.ssu.xyvento.myblogapp.databinding.ActivityWelcomePageBinding
 
-class Login_Screen_Activity : AppCompatActivity() {
+class Welcome_page_Activity : AppCompatActivity() {
 
-    private  val binding : ActivityLoginScreenBinding by lazy {
-        ActivityLoginScreenBinding.inflate(layoutInflater)
+    private val binding: ActivityWelcomePageBinding by lazy {
+        ActivityWelcomePageBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,11 +20,11 @@ class Login_Screen_Activity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        binding.btnregister1.setOnClickListener {
-            startActivity(Intent(this, Register_Screen_Activity::class.java))
+        // get Started Button Done
+        val getStartedButton = findViewById<Button>(R.id.btn_getstarted)
+        getStartedButton.setOnClickListener {
+             startActivity(Intent(this, Login_Screen_Activity::class.java))
             finish()
         }
-
-
     }
 }

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBlogApp">
         <activity
+            android:name=".Welcome_page_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Register_Screen_Activity"
+            android:exported="false" />
+        <activity
             android:name=".Login_Screen_Activity"
             android:exported="false" />
         <activity
